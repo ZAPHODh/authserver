@@ -11,6 +11,7 @@ const corsOptions: CorsOptions = {
         process.env.NODE_ENV === 'development?'
             ? 'https://localhost:3000'
             : 'https://portifolio-luis.netlify.app',
+    credentials: true,
 }
 mongoose.connect(process.env.MONGO_CONNECT, (err) => {
     if (err) throw err
